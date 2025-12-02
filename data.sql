@@ -2,7 +2,7 @@
 
 -- Clear existing data (optional, use if needed)
 -- DELETE FROM OrderItem;
--- DELETE FROM "Order";
+-- DELETE FROM 'Order';
 -- DELETE FROM MarketVendor;
 -- DELETE FROM Product;
 -- DELETE FROM Customer;
@@ -128,7 +128,7 @@ INSERT INTO Customer (customer_id, customer_name, email, phone) VALUES
 (3, 'Ethan Smith', 'ethan.smith@example.com', '507-555-3030');
 
 -- A few sample orders (pickup at markets)
-INSERT INTO "Order" (order_id, customer_id, pickup_market_id, order_date, total_price) VALUES
+INSERT INTO `Order` (order_id, customer_id, pickup_market_id, order_date, total_price) VALUES
 (1, 1, 1, '2025-07-10 09:30:00', 19.25),
 (2, 2, 2, '2025-07-11 10:15:00', 27.50),
 (3, 1, 3, '2025-07-12 09:45:00', 15.50),
