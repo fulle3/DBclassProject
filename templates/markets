@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Farmers Markets</h2>
+<ul>
+  {% for m in markets %}
+    <li>
+      <a href="{{ url_for('market_detail', market_id=m.market_id) }}">
+        {{ m.name }}
+      </a>
+      – {{ m.location }} ({{ m.schedule }})
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
