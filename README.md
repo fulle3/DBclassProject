@@ -88,3 +88,7 @@ This is implemented using MarketVendor
 
 • A FarmersMarket can have many Orders assigned for pickup
 (order.pickup_market_id FK)
+
+
+[marketERD.pdf](https://github.com/user-attachments/files/23872207/marketERD.pdf)
+
