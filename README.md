@@ -92,3 +92,10 @@ This is implemented using MarketVendor
 
 [marketERD.pdf](https://github.com/user-attachments/files/23872207/marketERD.pdf)
 
+## How to set up the database
+
+1. Run schema.sql to create tables.
+2. Run data.sql to insert sample data.
+3. Use queries.sql as reference for application queries.
+
+
