@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Search Products</h2>
+
+<form method="get" action="{{ url_for('search_products') }}">
+  <input type="text" name="q" value="{{ q }}" placeholder="Search by name or category">
+  <button type="submit">Search</button>
+</form>
+
+{% if q %}
+  <h3>Results for "{{ q }}"</h3>
+  {% if results %}
+    <ul>
+      {% for r in results %}
+        <li>
+          {{ r.product_name }} ({{ r.category }}) –
+          ${{ "%.2f"|format(r.unit_price) }} from
+          {{ r.vendor_name }} at {{ r.market_name }} ({{ r.location }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+{% endif %}
+{% endblock %}
