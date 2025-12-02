@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ market.name }}</h2>
+<p>{{ market.location }} – {{ market.schedule }}</p>
+
+<h3>Vendors at this market</h3>
+<ul>
+  {% for v in vendors %}
+    <li>{{ v.vendor_name }} (Booth {{ v.booth_number }})</li>
+  {% endfor %}
+</ul>
+{% endblock %}
