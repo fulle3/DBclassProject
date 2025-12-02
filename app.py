@@ -9,7 +9,7 @@ app.secret_key = "change_this_secret"
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "your_password_here",
+    "password": "",
     "database": "mn_marketlink"
 }
 
