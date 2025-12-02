@@ -114,7 +114,7 @@ SELECT
     o.total_price,
     fm.name AS pickup_market_name,
     fm.location
-FROM "Order" o
+FROM `Order` o
 JOIN FarmersMarket fm ON o.pickup_market_id = fm.market_id
 WHERE o.customer_id = :customerId
 ORDER BY o.order_date DESC;
@@ -131,7 +131,7 @@ SELECT
     oi.quantity,
     oi.price_at_purchase,
     (oi.quantity * oi.price_at_purchase) AS line_total
-FROM "Order" o
+FROM `Order` o
 JOIN Customer c ON o.customer_id = c.customer_id
 JOIN FarmersMarket fm ON o.pickup_market_id = fm.market_id
 JOIN OrderItem oi ON o.order_id = oi.order_id
