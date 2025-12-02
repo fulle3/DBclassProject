@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Place Pre-Order</h2>
+
+<form method="post" action="{{ url_for('place_order') }}">
+  <label for="customer_id">Customer:</label>
+  <select name="customer_id" id="customer_id" required>
+    {% for c in customers %}
+      <option value="{{ c.customer_id }}">{{ c.customer_name }}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+
+  <label for="market_id">Pickup Market:</label>
+  <select name="market_id" id="market_id" required>
+    {% for m in markets %}
+      <option value="{{ m.market_id }}">{{ m.name }}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+
+  <label for="product_id">Product:</label>
+  <select name="product_id" id="product_id" required>
+    {% for p in products %}
+      <option value="{{ p.product_id }}">{{ p.product_name }}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity" id="quantity" value="1" min="1" required>
+  <br><br>
+
+  <button type="submit">Place Order</button>
+</form>
+{% endblock %}
