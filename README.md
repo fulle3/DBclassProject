@@ -17,7 +17,7 @@ Core Features:
 • Allows vendors to operate at multiple markets
 • Allows users to view order history
 
-2. ERD Structure (Your main deliverable)
+2. ERD Structure
 ENTITIES:
 FarmersMarket
 
