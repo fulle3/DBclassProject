@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MN MarketLink</title>
+</head>
+<body>
+    <h1>MN MarketLink</h1>
+    <nav>
+        <a href="{{ url_for('list_markets') }}">Markets</a> |
+        <a href="{{ url_for('search_products') }}">Search Products</a> |
+        <a href="{{ url_for('place_order') }}">Place Pre-Order</a>
+    </nav>
+    <hr>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+          <li><strong>{{ category }}:</strong> {{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</body>
+</html>
