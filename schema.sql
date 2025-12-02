@@ -34,7 +34,7 @@ CREATE TABLE Product (
         ON UPDATE CASCADE
 );
 
-CREATE TABLE "Order" (
+CREATE TABLE `Order` (
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT NOT NULL,
     pickup_market_id INT NOT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE OrderItem (
     price_at_purchase DECIMAL(10,2) NOT NULL,
     CONSTRAINT fk_orderitem_order
         FOREIGN KEY (order_id)
-        REFERENCES "Order"(order_id)
+        REFERENCES `Order`(order_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     CONSTRAINT fk_orderitem_product
